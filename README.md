@@ -10,4 +10,4 @@ Durante esta semana foram foram desenvolvidas diversas funcionalidade que após 
 
 - Cadastro de professores
 - Cadastro de aulas
-- Listagem de professore
+- Listagem de professores
