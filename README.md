@@ -6,8 +6,14 @@ Este projeto tem por finalidade de conectar professores e alunos para que possam
 
 ## Funções
 
-Durante esta semana foram foram desenvolvidas diversas funcionalidade que após essa semana dei continuidade no desenvolvimento
+Durante esta semana foram foram desenvolvidas as seguintes funcionalidade
 
 - Cadastro de professores
 - Cadastro de aulas
 - Listagem de professores
+
+Após essa semana estou dando seguimento nas novas funcionalidades
+
+- Cadastro de usuários
+- Login de usuários
+- Recuperação de senha
