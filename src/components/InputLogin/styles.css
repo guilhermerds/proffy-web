@@ -1,0 +1,49 @@
+.input-block {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+}
+
+.input-block input {
+  width: 100%;
+  height: 6.4rem;
+  margin-top: 0.8rem !important;
+  border-radius: 0.8rem;
+  background-color: var(--color-input-background);
+  border: 1px solid var(--color-line-in-white);
+  outline: 0;
+  padding: 0 1.6rem;
+  transition: all 0.3s ease-out;
+}
+.input-block input::placeholder {
+  color: transparent;
+}
+
+.input-block label {
+  font: 1.6rem Poppins;
+  color: var(--color-text-complement);
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: 1.8rem;
+  margin-top: 2.85rem;
+  transition: all 0.3s ease-out;
+}
+
+.input-block input:focus + label,
+.input-block input:not(:placeholder-shown) + label {
+  font-size: 1.2rem;
+  margin-top: 1.3rem;
+  color: var(--color-placeholder);
+}
+
+.input-block:focus-within::after {
+  width: 2px;
+  height: 4.6rem;
+  /* o content é obrigatório quando utiliza o after ou o before*/
+  content: "";
+  background-color: var(--color-primary-light);
+  position: absolute;
+  left: 0;
+  top: 1.6rem;
+}

@@ -1,0 +1,103 @@
+main {
+  width: 100vw;
+  height: 100vh;
+}
+.float {
+  width: 100%;
+  height: 50vh;
+  position: absolute;
+  top: 0;
+}
+
+.sign-up-container {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  margin-top: 22vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sign-up-container .top-bar-container {
+  width: 40rem;
+  margin-top: 28rem;
+}
+
+#sign-up-form {
+  width: 40rem;
+  margin-top: 2rem;
+}
+
+#sign-up-form fieldset {
+  border: 0;
+}
+
+#sign-up-form fieldset legend {
+  font-family: Poppins;
+  font-weight: 600;
+  font-size: 3.2rem;
+  color: var(--color-text-title);
+  margin-bottom: 1rem;
+}
+
+#sign-up-form fieldset .legend-subtitle {
+  font-family: Poppins;
+  font-size: 1.6rem;
+  color: var(--color-text-base);
+  max-width: 28rem;
+  margin-bottom: 4rem;
+}
+
+#sign-up-form fieldset button[type="submit"] {
+  margin: 4rem 0;
+  width: 100%;
+  height: 5.6rem;
+  border: 0;
+  border-radius: 0.8rem;
+  outline: none;
+  font-family: Archivo;
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+#sign-up-form fieldset .button-submit-inactive {
+  background-color: var(--color-button-inactive);
+  color: var(--color-text-complement);
+  cursor: not-allowed;
+}
+
+#sign-up-form fieldset .button-submit-active {
+  background-color: var(--color-secondary);
+  color: var(--color-title-in-primary);
+  cursor: pointer;
+}
+
+#sign-up-form fieldset .button-submit-active:hover {
+  background-color: var(--color-secondary-dark);
+}
+
+@media (min-width: 1050px) {
+  main {
+    display: flex;
+    flex-direction: row;
+  }
+  .float {
+    position: relative;
+    width: 55vw;
+    height: 100%;
+  }
+
+  .sign-up-container {
+    position: relative;
+    width: 45vw;
+    margin-top: 0;
+  }
+  .sign-up-container .top-bar-container {
+    margin-top: 2rem;
+  }
+
+  #sign-up-form {
+    margin-top: 8rem;
+  }
+}

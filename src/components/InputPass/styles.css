@@ -1,0 +1,75 @@
+.input-pass-block {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+}
+
+.input-pass-block label {
+  font-size: 1.4rem;
+}
+
+.input-pass-block input {
+  width: 100%;
+  height: 6.4rem;
+  margin-top: 0.8rem;
+  border-radius: 0.8rem;
+  background-color: var(--color-input-background);
+  border: 1px solid var(--color-line-in-white);
+  outline: 0;
+  padding: 0 1.6rem;
+  transition: all 0.3s ease-out;
+}
+
+.input-pass-block input::placeholder {
+  color: transparent;
+}
+
+.input-pass-block label {
+  font: 1.6rem Poppins;
+  color: var(--color-text-complement);
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: 1.8rem;
+  margin-top: 2.85rem;
+  transition: all 0.3s ease-out;
+}
+
+.input-pass-block input:focus + label,
+.input-pass-block input:not(:placeholder-shown) + label {
+  font-size: 1.2rem;
+  margin-top: 1.3rem;
+  color: var(--color-placeholder);
+}
+
+.input-pass-block:focus-within::after {
+  width: 2px;
+  height: 4.6rem;
+  /* o content é obrigatório quando utiliza o after ou o before*/
+  content: "";
+  background-color: var(--color-primary-light);
+  position: absolute;
+  left: 0;
+  top: 1.6rem;
+  bottom: 1.6rem;
+}
+
+.input-pass-block .eye-button {
+  position: absolute;
+  width: 2.4rem;
+  height: 2.4rem;
+  background-color: rgba(0, 0, 0, 0);
+  border: 0;
+  right: 1rem;
+  margin: 0;
+  padding: 0;
+  top: 3rem;
+  outline: none;
+  cursor: pointer;
+}
+
+.input-pass-block .eye-button img {
+  width: 100%;
+  height: 100%;
+  margin: auto;
+}

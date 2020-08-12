@@ -1,0 +1,56 @@
+main.success {
+  background-image: url("../../assets/images/success-background.svg");
+  background-repeat: no-repeat;
+  background-color: var(--color-primary);
+  background-size: 80%;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+main.success img {
+  height: 9rem;
+  width: 9rem;
+}
+main.success h1 {
+  font-family: Archivo;
+  font-weight: bold;
+  font-size: 5.4rem;
+  text-align: center;
+  color: var(--color-box-base);
+  margin: 5rem 0 2rem 0;
+}
+
+main.success p {
+  font-family: Poppins;
+  font-size: 1.6rem;
+  text-align: center;
+  color: var(--color-text-in-primary);
+  max-width: 48rem;
+  margin-bottom: 12rem;
+}
+
+main.success .success-button {
+  width: 20rem;
+  height: 5.8rem;
+  border: 0;
+  border-radius: 0.8rem;
+  background-color: var(--color-secondary);
+  outline: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.2s;
+  font-family: Archivo;
+  font-weight: 600;
+  font-size: 1.6rem;
+  text-decoration: none;
+  color: var(--color-button-text);
+}
+
+main.success .success-button:hover {
+  background-color: var(--color-secondary-dark);
+}

@@ -1,0 +1,90 @@
+.forgot-pass {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 50vh 1fr;
+  grid-template-areas: "logo" "form";
+}
+
+.forgot-pass-side {
+  grid-area: logo;
+}
+
+.forgot-pass-container {
+  grid-area: form;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.forgot-pass-container header {
+  width: 40rem;
+  margin: 3rem 0;
+}
+
+#forgot-pass-form {
+  width: 40rem;
+}
+
+#forgot-pass-form fieldset {
+  border: 0;
+}
+#forgot-pass-form fieldset legend {
+  font-family: Poppins;
+  font-weight: 600;
+  font-size: 3.6rem;
+  color: var(--color-text-title);
+}
+
+#forgot-pass-form fieldset .legend-subtitle {
+  font-family: Poppins;
+  font-size: 1.6rem;
+  color: var(--color-text-base);
+  margin-bottom: 5rem;
+}
+
+#forgot-pass-form fieldset button {
+  margin: 4rem 0 1.8rem 0;
+  width: 100%;
+  height: 5.6rem;
+  border: 0;
+  border-radius: 0.8rem;
+  outline: none;
+  font-family: Archivo;
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+#forgot-pass-form fieldset .button-submit-inactive {
+  background-color: var(--color-button-inactive);
+  color: var(--color-text-complement);
+  cursor: not-allowed;
+}
+
+#forgot-pass-form fieldset .button-submit-active {
+  background-color: var(--color-secondary);
+  color: var(--color-title-in-primary);
+  cursor: pointer;
+}
+
+#forgot-pass-form fieldset .button-submit-active:hover {
+  background-color: var(--color-secondary-dark);
+}
+
+@media (min-width: 1050px) {
+  .forgot-pass {
+    display: flex;
+    flex-direction: row;
+  }
+  .forgot-pass-side {
+    width: 55vw;
+  }
+
+  .forgot-pass-container {
+    width: 45vw;
+  }
+
+  #forgot-pass-form fieldset {
+    margin-top: 10rem;
+  }
+}
