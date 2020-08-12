@@ -62,12 +62,14 @@ main {
 }
 
 #sign-up-form fieldset .button-submit-inactive {
+  transition: 0.3s;
   background-color: var(--color-button-inactive);
   color: var(--color-text-complement);
   cursor: not-allowed;
 }
 
 #sign-up-form fieldset .button-submit-active {
+  transition: 0.3s;
   background-color: var(--color-secondary);
   color: var(--color-title-in-primary);
   cursor: pointer;

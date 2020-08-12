@@ -1,17 +1,17 @@
 import React, { useState, useEffect, FormEvent } from "react";
-import { Link, useHistory } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 import UserInfo from "../../components/UserInfo";
-
 import InputLogin from "../../components/InputLogin";
+import SuccessMessage from "../../components/SuccessMessage";
 
 import backIcon from "../../assets/images/icons/back.svg";
 
 import "./styles.css";
 
 function ForgotPass() {
-  const history = useHistory();
   const [isActive, setIsActive] = useState(false);
+  const [showSuccess, setShowSuccess] = useState(false);
   const [email, setEmail] = useState("");
 
   useEffect(() => {
@@ -26,11 +26,19 @@ function ForgotPass() {
     e.preventDefault();
 
     if (isActive) {
-      history.push("/sent-email");
+      setShowSuccess(true);
     }
   }
 
-  return (
+  return showSuccess ? (
+    <SuccessMessage
+      title="Redefinição enviada!"
+      message="Boa, agora é só checar o e-mail que foi enviado para você redefinir sua
+        senha e aproveitar os estudos."
+      link="/"
+      buttonText="Voltar ao login"
+    />
+  ) : (
     <main className="forgot-pass">
       <div className="forgot-pass-container">
         <header className="top-bar-container">

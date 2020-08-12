@@ -85,13 +85,14 @@ main {
 }
 
 #login-user fieldset .login-button-inactive {
+  transition: 0.3s;
   background-color: var(--color-button-inactive);
-
   color: var(--color-text-complement);
   cursor: not-allowed;
 }
 
 #login-user fieldset .login-button-active {
+  transition: 0.3s;
   background-color: var(--color-secondary);
   color: var(--color-title-in-primary);
   cursor: pointer;

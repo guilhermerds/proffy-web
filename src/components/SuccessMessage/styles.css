@@ -1,4 +1,4 @@
-main.success {
+section.success {
   background-image: url("../../assets/images/success-background.svg");
   background-repeat: no-repeat;
   background-color: var(--color-primary);
@@ -8,13 +8,17 @@ main.success {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
 }
 
-main.success img {
+section.success img {
   height: 9rem;
   width: 9rem;
 }
-main.success h1 {
+section.success h1 {
   font-family: Archivo;
   font-weight: bold;
   font-size: 5.4rem;
@@ -23,7 +27,7 @@ main.success h1 {
   margin: 5rem 0 2rem 0;
 }
 
-main.success p {
+section.success p {
   font-family: Poppins;
   font-size: 1.6rem;
   text-align: center;
@@ -32,7 +36,7 @@ main.success p {
   margin-bottom: 12rem;
 }
 
-main.success .success-button {
+section.success .success-button {
   width: 20rem;
   height: 5.8rem;
   border: 0;

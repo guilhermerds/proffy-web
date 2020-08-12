@@ -1,5 +1,5 @@
 import React, { useEffect, useState, FormEvent } from "react";
-import { Link, useHistory } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 import UserInfo from "../../components/UserInfo";
 
@@ -8,10 +8,13 @@ import backIcon from "../../assets/images/icons/back.svg";
 import "./styles.css";
 import InputLogin from "../../components/InputLogin";
 import InputPass from "../../components/InputPass";
+import SuccessMessage from "../../components/SuccessMessage";
 
 function SignUp() {
-  const history = useHistory();
+  const [showSuccess, setShowSuccess] = useState(false);
+
   const [isActive, setIsActive] = useState(false);
+
   const [email, setEmail] = useState("");
   const [pass, setPass] = useState("");
   const [name, setName] = useState("");
@@ -34,11 +37,19 @@ function SignUp() {
     e.preventDefault();
 
     if (isActive) {
-      history.push("/");
+      setShowSuccess(true);
     }
   }
 
-  return (
+  return showSuccess ? (
+    <SuccessMessage
+      title="Cadastro concluído"
+      message="Agora você faz parte da plataforma Proffy. 
+      Tenha uma ótima experiência."
+      link="/"
+      buttonText="Fazer login"
+    />
+  ) : (
     <main>
       <div className="sign-up-container">
         <header className="top-bar-container">
