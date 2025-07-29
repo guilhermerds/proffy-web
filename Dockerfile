@@ -1,5 +1,5 @@
 # Etapa 1: build
-FROM node:24-alpine AS builder
+FROM node AS builder
 
 WORKDIR /app
 
@@ -9,7 +9,7 @@ COPY . .
 RUN npm run build
 
 # Etapa 2: produção com 'serve'
-FROM node:24-alpine 
+FROM node
 
 WORKDIR /app
 
